@@ -16,7 +16,7 @@ Its premise is simple: existing abstractions are evidence, not authority. Recove
 | `gobstraction-contain` | Compatibility or variant knowledge leaking across callers |
 | `gobstraction-zero` | Zero-based test for historical or sunk-cost types |
 | `gobstraction-ground` | Formal properties that may not trace to real requirements |
-| `gobstraction-compose` | Illegal states emerging from composed state machines |
+| `gobstraction-compose` | Illegal states from composed state machines; misplaced state or lifecycle ownership |
 
 ## Install
 

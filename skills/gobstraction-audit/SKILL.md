@@ -16,6 +16,7 @@ Classify the change or area:
 - abstraction introduction or deletion
 - compatibility or migration
 - formal model or invariant
+- state or lifecycle ownership
 - multiple stateful subsystems
 - broad structural refactor
 
@@ -34,6 +35,7 @@ Use only the smallest relevant set, normally 1-3:
 | historical/framework residue | `gobstraction-zero` |
 | theorem/spec with unclear requirement trace | `gobstraction-ground` |
 | interacting state machines/protocols | `gobstraction-compose` |
+| state or lifecycle owned by the wrong component; local failure forcing remote recovery | `gobstraction-compose` |
 
 When two lenses pull in opposite directions, treat that as useful evidence. Example: `split` may discover two real responsibilities while `delete` shows that two new interfaces would still be unjustified.
 
@@ -42,8 +44,8 @@ When two lenses pull in opposite directions, treat that as useful evidence. Exam
 For each finding provide:
 
 - **Claim** — one falsifiable architectural statement.
-- **Evidence** — counts, call sites, mappings, branches, dependencies, history, or reachable states.
-- **Counterfactual** — mentally delete/merge/split/centralize/rebuild and state what semantic capability changes.
+- **Evidence** — counts, call sites, mappings, branches, dependencies, history, reachable states, or transition and failure-propagation paths.
+- **Counterfactual** — mentally delete/merge/split/centralize/rebuild, or relocate ownership, and state what semantic capability changes.
 - **Risk** — what boundary or invariant could make the proposed simplification wrong.
 - **Decision** — keep, change, or defer for insufficient evidence.
 

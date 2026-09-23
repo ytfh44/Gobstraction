@@ -21,6 +21,8 @@ List independent reasons the concept changes. Look for:
 
 A useful split separates change axes that can vary independently.
 
+When the collision is between lifetimes rather than change axes, use the ownership and lifetime check in `gobstraction-compose`.
+
 ## Counterfactual
 
 Imagine changing axis A while freezing axis B, then changing B while freezing A. If each change forces edits through the same concept for no semantic reason, a split is supported.

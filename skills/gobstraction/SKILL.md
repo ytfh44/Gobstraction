@@ -6,6 +6,7 @@ description: Use when a coding task leaves architecture, boundaries, abstraction
 # Gobstraction
 
 Existing code boundaries are evidence, not authority. Infer concepts from current requirements, invariants, actual variation, and composition constraints.
+Equivalent observable behavior does not imply equivalent ownership; the same state set can hide different recovery costs.
 
 ## Architectural Delta Gate
 
@@ -25,7 +26,7 @@ Before introducing, preserving, deleting, merging, or splitting a concept:
 - scattered legacy/version/type branches -> `gobstraction-contain`
 - historical/framework residue -> `gobstraction-zero`
 - weakly grounded proof/spec -> `gobstraction-ground`
-- interacting state machines -> `gobstraction-compose`
+- interacting state machines, or state/lifecycle ownership -> `gobstraction-compose`
 - broad review -> `gobstraction-audit`
 
 ## Guardrails
